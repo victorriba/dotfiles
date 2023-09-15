@@ -1,4 +1,5 @@
 local wezterm = require("wezterm")
+local mux = wezterm.mux
 local config = {
 	window_padding = {
 		left = 0,
@@ -11,7 +12,6 @@ local config = {
 	audible_bell = "Disabled",
 	window_close_confirmation = "NeverPrompt",
 	use_fancy_tab_bar = false,
-	tab_bar_at_bottom = true,
 }
 config.keys = {
 	{
@@ -51,5 +51,9 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 	return {
 		{ Text = " " .. id .. " " .. title .. " " },
 	}
+end)
+wezterm.on("gui-startup", function()
+	local tab, pane, window = mux.spawn_window({})
+	window:gui_window():maximize()
 end)
 return config
