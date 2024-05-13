@@ -1,4 +1,4 @@
-alias ls="exa"
+alias ls="lsd"
 alias cat="bat"
 alias v="nvim"
 alias top="btm"
