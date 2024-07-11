@@ -13,18 +13,11 @@ local config = {
         audible_bell = "Disabled",
         window_close_confirmation = "NeverPrompt",
         use_fancy_tab_bar = false,
+	window_background_opacity = 0.95,
+	send_composed_key_when_left_alt_is_pressed = true,
+
 }
 config.keys = {}
-config.window_frame = {
-	border_left_width = '0.5cell',
-	border_right_width = '0.5cell',
-	border_bottom_height = '0.25cell',
-	border_top_height = '0.25cell',
-	border_left_color = 'purple',
-	border_right_color = 'purple',
-	border_bottom_color = 'purple',
-	border_top_color = 'purple',
-  }
 for i = 1, 8 do
         -- CTRL+ALT + number to move to that position
         table.insert(config.keys, {
