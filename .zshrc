@@ -1,7 +1,11 @@
-alias ls="lsd"
+eval "$(zoxide init zsh)"
+
+alias ls="eza --icons=always"
 alias cat="bat"
 alias v="nvim"
 alias top="btm"
+alias cd="z"
+
 export PATH=$PATH:$(go env GOPATH)/bin
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export ANDROID_HOME=$HOME/Library/Android/sdk
