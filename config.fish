@@ -4,10 +4,9 @@ if status is-interactive
 end
 
 function fish_title
-    set -q argv[1]; or set argv fish
     set -l current_dir (basename (pwd))
     set -l parent_dir (basename (dirname (pwd)))
-    echo $parent_dir/$current_dir: $argv
+    echo $parent_dir/$current_dir
 end
 
 function ls --wraps='eza --icons=always' --description 'alias ls=eza --icons=always'
