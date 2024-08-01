@@ -1,5 +1,7 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+    set -x BUN_INSTALL $HOME/.bun
+    set -x PATH $BUN_INSTALL/bin $PATH
     set -x PATH $PATH (go env GOPATH)/bin
     set -x PATH /usr/local/opt/ruby/bin $PATH
     set -x ANDROID_HOME $HOME/Library/Android/sdk
